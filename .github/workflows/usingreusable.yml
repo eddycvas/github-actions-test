@@ -8,5 +8,5 @@ jobs:
         uses: actions/checkout@v3
       - name: Do something
         run: echo "I am doing something"
-      - name: Using reusable
-        uses: ./.github/workflows/reusable.yml
+  Useable:
+    uses: ./.github/workflows/reusable.yml
