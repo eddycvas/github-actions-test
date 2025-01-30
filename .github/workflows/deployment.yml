@@ -1,0 +1,15 @@
+name: deployment
+on:
+  push:
+    branches:
+      - main
+      - dev
+env: 
+  MONGODB_DB_NAME: gha-demo
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: get code
+        uses: actions/checkout@v3
+        
