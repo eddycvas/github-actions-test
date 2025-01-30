@@ -1,0 +1,12 @@
+name: Using reusable workflow
+on: push
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Do something
+        run: echo "I am doing something"
+      - name: Using reusable
+        uses: ./.github/workflows/reusable.yml
