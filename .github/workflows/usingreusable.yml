@@ -1,6 +1,14 @@
 name: Using reusable workflow
 on: push
 jobs:
+  Artifact: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: upload artifact
+        uses: actions/upload-artifact@v3
+        with: 
+            name: dist-files
+            path: dist
   Test:
     runs-on: ubuntu-latest
     steps:
@@ -10,3 +18,5 @@ jobs:
         run: echo "I am doing something"
   Useable:
     uses: ./.github/workflows/reusable.yml
+    with:
+      artifact-name: dist-files
